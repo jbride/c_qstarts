@@ -1,6 +1,8 @@
 #include <iostream>
 #include <array>
 
+
+// general template
 template<typename T>
 void printArray(T inArray){
 
@@ -13,6 +15,12 @@ void printArray(T inArray){
         }
     }
     std::cout << "\n";
+}
+
+// specific to std::array<int>
+template<>
+void printArray(std::array<int, 3>) {
+    std::cout << "printing from template specialization\n";
 }
 
 int main() {
