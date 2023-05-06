@@ -1,3 +1,6 @@
 *
 !.gitignore
 !*.cpp
+!vcpkg
+!vcpkg.txt
+!custom-triplets
