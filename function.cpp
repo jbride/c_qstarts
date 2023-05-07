@@ -30,6 +30,6 @@ int main() {
     delete pDynamicInt;
 
     // throw seg fault at runtime
-    std::cout << "invalidRef = " << invalidRef() << endl;
+    std::cout << "invalidRef = " << invalidRef << endl;
     return 0;
 }
