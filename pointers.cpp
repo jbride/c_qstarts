@@ -26,17 +26,17 @@ int main() {
     int i = 12345;
 
     // create a pointer to the address of the variable
-    int *p = &i;
+    int *pI = &i;
 
-    std::cout << "p = " << p << ", &i = " << &i << endl;
+    std::cout << "pI = " << pI << ", &i = " << &i << endl;
 
-    // add 2 to the de-referenced pointer (the actual variable, i)
+    // add 3 to the de-referenced pointer (the actual variable, i)
     int j = *p + 3;
 
     // increment the variable i to 2
-    *p = *p +2;
+    *pI = *pI +2;
 
-    std::cout <<  "i = " << i << ", p = " << p << endl;
+    std::cout <<  "i = " << i << ", pI = " << pI << endl;
 
     ArrayTest aTest;
     aTest.testArray();
