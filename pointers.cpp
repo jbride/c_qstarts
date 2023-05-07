@@ -1,4 +1,3 @@
-#include <string>
 #include <iostream>
 #include <array>
 using namespace std;
@@ -31,7 +30,7 @@ int main() {
     std::cout << "pI = " << pI << ", &i = " << &i << endl;
 
     // add 3 to the de-referenced pointer (the actual variable, i)
-    int j = *p + 3;
+    int j = *pI + 3;
 
     // increment the variable i to 2
     *pI = *pI +2;

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 class Person {
@@ -20,6 +19,7 @@ int main() {
     int *pI = nullptr;
 
     // create dynamic variable
+    // Dynamic variables are not known by name but are instead known by a pointer to the dynamic variable
     pI = new int{51};
     std::cout << "mem address " << pI << ", value = " << *pI << endl;
 
