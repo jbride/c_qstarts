@@ -4,3 +4,6 @@
 !vcpkg
 !vcpkg.txt
 !custom-triplets
+!src
+!CMakeLists.txt
+!README.adoc

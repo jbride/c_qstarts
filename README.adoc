@@ -1,0 +1,12 @@
+-----
+$ rm -rf build \
+    && mkdir -p build/bin \
+    && cmake \
+    -B build \
+    -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake \
+  src
+-----
+
+-----
+$ cmake --build build --config Release
+-----
