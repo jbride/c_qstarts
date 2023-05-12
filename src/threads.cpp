@@ -1,6 +1,5 @@
 #include <iostream>
 #include <chrono>
-#include <iomanip>
 #include <thread>
 #include <random>
 #include "ThreadManager.h"
@@ -15,12 +14,6 @@ inline void printTime(int loops, int delayMillis) {
         std::cout << ThreadManager::GetCurrentThreadName() << "\t" << x << "\t: printTime() millis since Unix Epoch (00:00:00 UTC on 1 January 1970) " << now.time_since_epoch().count() << endl;
 
         auto stime = std::chrono::system_clock::to_time_t(now);
-
-        // pass the address of stime to the localtime function ???
-        //auto ltime = std::localtime(&stime);
-
-        //std::cout << std::this_thread::get_id() << " : printTime() local time = " << std::put_time(ltime, "%c") << endl;
-        //std::this_thread::sleep_for(std::chrono::milliseconds(delayMillis));
     }
 }
 

@@ -8,7 +8,8 @@ find_package(restinio CONFIG REQUIRED)
 # file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "*.h" "*.cpp")
 
 #set(SRC_FILES restinio_test.cpp)
-set(SRC_FILES CommonHeaders.h ThreadManager.h ThreadManager.cpp threads.cpp)
+#set(SRC_FILES CommonHeaders.h ThreadManager.h ThreadManager.cpp threads.cpp)
+set(SRC_FILES time.cpp)
 
 message( SRC_FILES = ${SRC_FILES} )
 
