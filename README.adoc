@@ -1,3 +1,14 @@
+
+. Pull vcpkg related dependencies:
++
+-----
+$ ( cd vcpkg;  ./vcpkg install --overlay-triplets=../custom-triplets --triplet x64-linux $(cat ../vcpkg.txt) )
+-----
+
+. Execute `configure` and `generate` phases of cmake on project source code:
++
+NOTE: _CMAKE_TOOLCHAIN_FILE_ property specifies the path to the OS specific C++ dependencies pulled and managed by vcpkg. 
++
 -----
 $ rm -rf build \
     && mkdir -p build/bin \
@@ -7,6 +18,8 @@ $ rm -rf build \
   src
 -----
 
+. Build:
++
 -----
 $ cmake --build build --config Release
 -----
