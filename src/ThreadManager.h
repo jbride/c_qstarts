@@ -1,3 +1,5 @@
+
+// cause the current source file to be included only once in a single compilation
 #pragma once
 
 #include "CommonHeaders.h"

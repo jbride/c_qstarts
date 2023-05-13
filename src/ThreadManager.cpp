@@ -21,7 +21,7 @@ string ThreadManager::GetCurrentThreadName() {
 string ThreadManager::GetThreadName(const std::thread::id& threadId){
 	auto lock = lock_guard{ m_MapLock };
 	auto it = m_threadNamesById.find(threadId);
-	return it ->second;
+	return it -> second;
 }
 
 void ThreadManager::SetThreadName(const std::thread::id& threadId, const string& threadName) {
