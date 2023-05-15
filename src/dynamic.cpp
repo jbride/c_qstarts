@@ -17,8 +17,12 @@ class Person {
 
 };
 
-class PointerManager {
-
+/* Resource Acquisition is Initialization (RAII)
+ *   RAII is a powerful idiom in C++ that is used for many resources: dynamic variables, open files, window handles, semaphores & mutexes( multi-threaded synch primitives)
+ *   What makes RAII classes so useful is that they manage the lifetime of the resource they own.
+ *   Developers don't have to think about how/when to release the resource:  it's all automatic
+ */
+class PersonPointerManager {
 
     /*     
      * One of the most powerful ways to manage ownership of a dynamic variable is to make the owned pointer to a dynamic variable a class member variable.
@@ -28,10 +32,10 @@ class PointerManager {
 
     public :
 
-        PointerManager(int i) {
+        PersonPointerManager(int i) {
             pPerson = new Person(52);
         }
-        ~PointerManager() {
+        ~PersonPointerManager() {
             delete pPerson;
         }
 
@@ -60,11 +64,11 @@ int main() {
     Person pObj = Person(52);
 
     /*
-     * Declare a global, function-local or block-local instance of the class.
+     * Declare a function-local instance of the class.
      * Subsequently, the dynamic variable contained in the class instance will have the same lifetime as the class instance.
      * This technique makes the lifetime of dynamic variables as easy to understand as the lifetime of other kinds of variables
     */
-    PointerManager pManager(52);
+    PersonPointerManager ppManager(52);
 
     return 0;
 }
