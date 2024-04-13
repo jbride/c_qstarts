@@ -1,5 +1,8 @@
 *
+!automated
+!gmp
 !.gitignore
+!*.c
 !*.cpp
 !*.h
 !vcpkg

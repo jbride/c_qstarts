@@ -33,7 +33,7 @@ $ VCPKG_TARGET_TRIPLET=arm64-linux
 . Pull vcpkg related dependencies:
 +
 -----
-$ ( cd vcpkg;  ./vcpkg install --overlay-triplets=../config/custom-triplets --triplet ${VCPKG_TARGET_TRIPLET-"x64-linux"} $(cat ../vcpkg.txt) )
+$ ( cd vcpkg;  ./vcpkg install --overlay-triplets=../config/custom-triplets --triplet ${VCPKG_TARGET_TRIPLET-"x64-linux"} $(cat ../config/vcpkg.txt) )
 -----
 
 . Execute `configure` and `generate` phases of cmake on project source code:

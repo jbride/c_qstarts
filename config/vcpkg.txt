@@ -1,3 +1,0 @@
-restinio
-boost-asio
-boost-thread
